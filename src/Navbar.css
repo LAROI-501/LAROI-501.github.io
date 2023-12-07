@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Lilita One", "Noto Sans TC", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  background-color: #e0d0c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 4em;
+}
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+.logo-name {
+  font-size: 2.2em;
+  font-family: "Lobster";
+  text-decoration: none;
+  color: #004643;
+}
+.navRht {
+  align-self: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+.navIP {
+  width: 7em;
+  margin-right: 1rem;
+}
+.nav ul {
+  display: flex;
+  gap: 0.2rem;
+}
+.navRht > li {
+  list-style-type: none;
+  padding: 7px 15px;
+  border-radius: 23px;
+  transition: background-color 150ms ease-in-out;
+}
+.dropdown-menu > a {
+  padding: 3px 8px;
+  /* margin: 0 5px; */
+  font-size: 20px;
+  border-radius: 23px;
+}
+.navRht > li:hover,
+.dropdown-menu > a:hover {
+  background-color: #a18368;
+}
+li > a,
+.dropdown-menu > a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
+.navImg {
+  height: 1.8em;
+}
+.navImg2 {
+  height: 1.3em;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.25em);
+  left: 0;
+  background-color: wheat;
+  width: 7em;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dropdown-menu > hr {
+  margin: 5px 8px;
+  border-color: #c7a484;
+  opacity: 0.3;
+  width: 10.5rem;
+}
+.dropdown > button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+}
+.drop-link {
+  display: flex;
+  gap: 0.2rem;
+  padding: 5px 15px;
+}
+
+@media (width < 750px) {
+  .nav {
+    padding: 1em 1em 0.2em;
+    display: grid;
+    justify-content: space-around;
+  }
+  .navLeft {
+    justify-content: center;
+  }
+  .logo-name {
+    display: flex;
+    font-size: 1.8em;
+  }
+  .navIP {
+    display: none;
+  }
+  .navRht {
+    font-size: 1.3em;
+  }
+  .navRht > li {
+    padding: 2px 5px;
+  }
+}

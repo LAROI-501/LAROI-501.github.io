@@ -1,0 +1,64 @@
+.eat-what-wheel {
+  display: flex;
+  justify-content: center;
+}
+.wheel {
+  position: relative;
+  transition: transform 4.5s ease-in-out;
+}
+
+canvas {
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #004643;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.spinBtn {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1em;
+  border: 4px solid #004643;
+  color: #004643;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  top: 194px;
+  right: 263.5px;
+  font-size: 21px;
+  text-align: center;
+  font-family: "Lobster", "Noto Sans TC", sans-serif;
+  font-weight: 600;
+}
+.spinBtn::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  width: 20px;
+  height: 30px;
+  background-color: white;
+  /* border: 4px solid #004643; */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+li.wheel-lists {
+  list-style: none;
+  transform: rotate(calc(360deg * var(--i)));
+  position: relative;
+  top: 50px;
+  right: 350px;
+}
+
+.wheelText {
+  display: flex;
+  position: absolute;
+  left: 120px;
+}

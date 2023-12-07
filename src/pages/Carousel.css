@@ -1,0 +1,50 @@
+.slides-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-img {
+  display: flex;
+  aspect-ratio: 1/1;
+  height: 100%;
+  transition: transform 500ms ease-out;
+}
+.slide-btns {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.slide-btn {
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+  font-size: 1.1em;
+  cursor: pointer;
+  &:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.post-pages {
+  position: absolute;
+  bottom: 4px;
+  right: 0px;
+  left: 0px;
+}
+.page-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.page-dot {
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 9999px;
+  transition: all;
+}

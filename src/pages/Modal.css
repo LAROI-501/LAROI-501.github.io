@@ -1,0 +1,137 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e0d0c1;
+  color: #1a1423;
+  /* padding: 50px; */
+  z-index: 1000;
+  display: flex;
+  aspect-ratio: 16/8.5;
+  width: 75vw;
+  box-shadow: 0 0 10px black;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.overlay-x {
+  position: absolute;
+  right: 1em;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+.overlay-arrow {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: 0 10px;
+}
+.arrow-right {
+  right: 0px;
+}
+.post-imgs {
+  display: flex;
+  /* z-index: -1; */
+  /* overflow: hidden; */
+}
+.post-img {
+  aspect-ratio: 1/1;
+  height: 100%;
+}
+.post-img-arrow {
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+  font-size: 1.1em;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: 0 10px;
+  cursor: pointer;
+  &:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+.img-arrow-rht {
+  right: 47.5%;
+}
+.post-texts {
+  padding: 15px 10px;
+  line-height: 30px;
+}
+.post-text {
+  font-size: 0.9em;
+  align-items: center;
+  font-weight: 500;
+}
+.post-icon {
+  font-size: 1.2em;
+  padding: 2px;
+  margin-right: 5px;
+}
+.post-scrollbar {
+  overflow-y: overlay;
+  &::-webkit-scrollbar {
+    width: 13px;
+  }
+  &::-webkit-scrollbar-track {
+    margin-block: 1px;
+    border-radius: 10px;
+    background: #e0d0c1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #c7a484;
+    border-radius: 10px;
+    border: 3px solid #e0d0c1;
+  }
+}
+.post-des {
+  line-height: 20px;
+}
+@supports (scrollbar-color: #c7a484 #e0d0c1) {
+  * {
+    scrollbar-color: #c7a484 #e0d0c1;
+    scrollbar-width: thin;
+  }
+}
+@media (max-width: 900px) {
+  .modal {
+    color: green;
+    aspect-ratio: 16/9;
+    width: 80vw;
+    /* height: 50vh; */
+  }
+  .post-img {
+    width: 45vw;
+  }
+  .post-img > img {
+    aspect-ratio: 1 / 1;
+    width: 45vw;
+  }
+  .img-arrow-rht {
+    right: 44%;
+  }
+  .post-texts {
+    width: 55vw;
+    padding: 10px 10px;
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+}

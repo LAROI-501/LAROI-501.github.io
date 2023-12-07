@@ -1,0 +1,30 @@
+body {
+  background-color: #e0d0c1;
+}
+
+footer {
+  padding: 1em 3em;
+  display: flex;
+  justify-content: center;
+}
+.quote {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #004643;
+  /* font-variant: small-caps;   */
+  display: grid;
+  align-content: center;
+}
+.imgFoot {
+  width: 50px;
+  align-items: center;
+}
+@media (width < 750px) {
+  .quote {
+    font-size: 1.2em;
+  }
+  .imgFoot {
+    width: 4.5em;
+  }
+}
